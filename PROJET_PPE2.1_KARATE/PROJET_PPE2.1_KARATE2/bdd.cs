@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
-namespace PROJET_PPE2._1_KARATE
+namespace PROJET_PPE2._1_KARATE2
 {
     internal class bdd
     {

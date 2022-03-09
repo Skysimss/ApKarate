@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Les informations générales relatives à un assembly dépendent de
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("PROJET_PPE2.1_KARATE")]
+[assembly: AssemblyTitle("PROJET_PPE2.1_KARATE2")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PROJET_PPE2.1_KARATE")]
+[assembly: AssemblyProduct("PROJET_PPE2.1_KARATE2")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Le GUID suivant est pour l'ID de la typelib si ce projet est exposé à COM
-[assembly: Guid("012badb1-3bdf-44d3-a13c-53fc50fc337c")]
+[assembly: Guid("68115e50-feaa-411f-a38b-e52868fad567")]
 
 // Les informations de version pour un assembly se composent des quatre valeurs suivantes :
 //

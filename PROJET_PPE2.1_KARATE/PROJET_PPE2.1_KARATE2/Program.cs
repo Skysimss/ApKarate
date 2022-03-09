@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace projet1
+namespace PROJET_PPE2._1_KARATE2
 {
     internal static class Program
     {

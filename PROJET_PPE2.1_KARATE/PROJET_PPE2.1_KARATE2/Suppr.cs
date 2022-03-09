@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace PROJET_PPE2._1_KARATE
+namespace PROJET_PPE2._1_KARATE2
 {
     public partial class Suppr : Form
     {
         public Suppr()
         {
             InitializeComponent();
-            /*MySqlConnection conn = bdd.ConnectionBD();
+            MySqlConnection conn = bdd.ConnectionBD();
             conn.Open();
 
-            string sqlInscription = "SELECT NUM_COMPETITION, NUM_LICENCE, NOTE_GLOBALE FROM inscription";
+            string sqlInscription = "SELECT NUM_COMPETITION, NUM_LICENCE, NOTE_GLOBALE FROM inscription WHERE NOTE_GLOBALE is NULL";
             MySqlCommand cmdInscription = new MySqlCommand(sqlInscription, conn);
             MySqlDataReader readerInscription = cmdInscription.ExecuteReader();
 
@@ -34,23 +34,40 @@ namespace PROJET_PPE2._1_KARATE
             conn.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void GridInscription_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnsupr_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = bdd.ConnectionBD();
             conn.Open();
 
+            int ligne = GridInscription.CurrentCell.RowIndex;
+
+            int numcomp = Convert.ToInt16(GridInscription[0, ligne].Value);
+
             string sqlSupprimer = "DELETE FROM inscription WHERE NUM_COMPETITION=@NUM_COMPETITION AND NUM_LICENCE=@NUM_LICENCE";
             MySqlCommand cmdSupprimer = new MySqlCommand(sqlSupprimer, conn);
-            string numLicence = GridInscription.SelectedRows[0].Cells[0].Value.ToString();
-            cmdSupprimer.Parameters.AddWithValue("NUM_COMPETITION", NUM_COMPETITION);
-            string numCompetition = GridInscription.SelectedRows[0].Cells[1].Value.ToString();
-            cmdSupprimer.Parameters.AddWithValue("NUM_LICENCE", numLicence);
-            cmdSupprimer.ExecuteNonQuery();*/
+            
+            
+            cmdSupprimer.Parameters.AddWithValue("@NUM_COMPETITION", numcomp);
+            
+           
+
+
+            string numlicence = GridInscription[1, ligne].Value.ToString();
+
+            
+            cmdSupprimer.Parameters.AddWithValue("@NUM_LICENCE", numlicence);
+            MessageBox.Show(numlicence);
+            cmdSupprimer.ExecuteNonQuery();
+
+            conn.Close();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
     }
 }

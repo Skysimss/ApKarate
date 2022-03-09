@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PROJET_PPE2._1_KARATE.Properties
+namespace PROJET_PPE2._1_KARATE2.Properties
 {
 
 
