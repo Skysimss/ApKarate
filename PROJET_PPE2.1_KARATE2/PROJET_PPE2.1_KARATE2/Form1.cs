@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace PROJET_PPE2._1_KARATE
+namespace PROJET_PPE2._1_KARATE2
 {
     public partial class Form1 : Form
     {
@@ -48,7 +48,8 @@ namespace PROJET_PPE2._1_KARATE
             }
             conn.Close();
         }
-        private void button1_Click_1(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = bdd.ConnectionBD();
             conn.Open();
@@ -60,23 +61,32 @@ namespace PROJET_PPE2._1_KARATE
             string numCompetition = Grid_Comp.SelectedRows[0].Cells[0].Value.ToString();
             cmdInscription.Parameters.AddWithValue("NUM_COMPETITION", numCompetition);
             cmdInscription.ExecuteNonQuery();
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form2 frm = new Form2();
+            Suppr frm = new Suppr();
             frm.Show();
         }
 
-        private void Grid_Membre_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void modif_Click(object sender, EventArgs e)
+        {
+            Modif frm = new Modif();
+            frm.Show();
         }
     }
+
+
+
+
 }

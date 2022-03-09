@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{012BADB1-3BDF-44D3-A13C-53FC50FC337C}</ProjectGuid>
+    <ProjectGuid>{8698A3A3-756A-4463-BE94-15A74D537EE6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PROJET_PPE2._1_KARATE</RootNamespace>
-    <AssemblyName>PROJET_PPE2.1_KARATE</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>projet1</RootNamespace>
+    <AssemblyName>projet1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -33,7 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,41 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bdd.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Suppr.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Suppr.Designer.cs">
-      <DependentUpon>Suppr.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_GestionEntraineur_AJ.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_GestionEntraineur_AJ.Designer.cs">
-      <DependentUpon>Frm_GestionEntraineur_AJ.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Suppr.resx">
-      <DependentUpon>Suppr.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_GestionEntraineur_AJ.resx">
-      <DependentUpon>Frm_GestionEntraineur_AJ.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
